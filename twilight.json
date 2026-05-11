@@ -1,0 +1,11 @@
+{
+  "name": "Sonic",
+  "name_ar": "سونيك",
+  "version": "1.0.0",
+  "author": "Your Studio",
+  "languages": ["ar", "en"],
+  "rtl": true,
+  "settings": "settings.json",
+  "category": "multi-purpose",
+  "tags": ["multi-purpose", "rtl", "modern"]
+}
