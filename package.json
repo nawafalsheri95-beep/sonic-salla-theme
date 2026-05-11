@@ -1,0 +1,8 @@
+{
+  "name": "sonic-salla-theme",
+  "version": "1.0.0",
+  "description": "Sonic - A modern multi-purpose Salla theme",
+  "scripts":{"dev":"salla theme serve","build":"salla theme build","deploy":"salla theme push"},
+  "dependencies":{"alpinejs":"^4.0.0","swiper":"^11.0.0"},
+  "license": "Commercial"
+}
