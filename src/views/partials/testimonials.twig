@@ -1,0 +1,17 @@
+<section class="bg-ink-50 py-20" data-reveal>
+  <div class="container">
+    <h2 class="font-display text-4xl text-center mb-12">{{ trans("testimonials.title") }}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {% for review in reviews %}
+      <div class="bg-cream-50 rounded-2xl p-6">
+        <salla-rating :value="{{ review.rating }}" readonly></salla-rating>
+        <p class="text-ink-700 mt-4 mb-6">{{ review.comment }}</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-cream-100 flex items-center justify-center text-sm font-medium">{{ review.author|slice(0,1) }}</div>
+          <span class="font-medium text-sm">{{ review.author }}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

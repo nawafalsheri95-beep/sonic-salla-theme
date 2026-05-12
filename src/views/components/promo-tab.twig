@@ -1,0 +1,7 @@
+{% if setting("show_promo_tab") %}
+<div class="fixed bottom-1/2 end-0 z-30 translate-y-1/2">
+  <div class="bg-accent text-cream-50 py-3 px-2 rounded-s-xl cursor-pointer text-vertical text-xs font-medium tracking-widest hover:ps-3 transition-all duration-300">
+    {{ setting("promo_tab_text", "20% OFF — SONIC20") }}
+  </div>
+</div>
+{% endif %}

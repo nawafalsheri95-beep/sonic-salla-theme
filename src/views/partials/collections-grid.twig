@@ -1,0 +1,16 @@
+<section class="container py-16" data-reveal>
+  <div class="flex items-end justify-between mb-8">
+    <h2 class="font-display text-4xl">{{ trans("homepage.collections") }}</h2>
+    <a href="/categories" class="btn-link">{{ trans("common.view_all") }} <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    {% for cat in categories %}
+    <a href="{{ cat.url }}" class="group relative aspect-[3/4] rounded-2xl overflow-hidden bg-cream-100">
+      <img src="{{ cat.image }}" alt="{{ cat.name }}" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+      <div class="absolute inset-0 bg-gradient-to-t from-ink-950/50 to-transparent flex items-end p-6">
+        <span class="font-display text-xl text-cream-50">{{ cat.name }}</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>

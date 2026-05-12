@@ -1,0 +1,1 @@
+@layer base { h1,h2,h3,h4,h5,h6 { @apply font-display tracking-tight text-ink-900; } a:not([class]) { @apply text-ink-900 underline underline-offset-2 hover:text-accent transition-colors; } }

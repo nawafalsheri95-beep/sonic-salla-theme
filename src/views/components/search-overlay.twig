@@ -1,0 +1,20 @@
+<div x-data="{open:false,q:'',results:[]}" @open-search.window="open=true;$nextTick(()=>$refs.input.focus())" @keydown.escape.window="open=false;q='';results=[]">
+  <div x-show="open" x-transition class="fixed inset-0 z-50 bg-ink-950/90 backdrop-blur-md flex items-start justify-center pt-24 px-6">
+    <div class="w-full max-w-2xl">
+      <div class="relative mb-8">
+        <input x-ref="input" x-model="q" @input.debounce.300ms="results=await $search(q)" type="search" placeholder="{{ trans('common.search') }}" class="w-full bg-cream-50/10 text-cream-50 placeholder:text-ink-400 border border-ink-700 rounded-2xl px-6 py-5 text-xl focus:outline-none focus:border-accent">
+        <button @click="open=false;q='';results=[]" class="absolute end-4 top-1/2 -translate-y-1/2 text-ink-400 hover:text-cream-50"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg></button>
+      </div>
+      <template x-if="results.length">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <template x-for="r in results" :key="r.id">
+            <a :href="r.url" class="bg-cream-50/5 rounded-xl p-3 hover:bg-cream-50/10 transition-colors no-underline">
+              <img :src="r.image" :alt="r.name" class="w-full aspect-square object-cover rounded-lg mb-2">
+              <p class="text-cream-50 text-sm font-medium line-clamp-2" x-text="r.name"></p>
+            </a>
+          </template>
+        </div>
+      </template>
+    </div>
+  </div>
+</div>

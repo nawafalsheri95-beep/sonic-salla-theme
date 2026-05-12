@@ -1,0 +1,5 @@
+{% if setting("show_announcement_bar") %}
+<div class="bg-ink-900 text-cream-50 text-center py-2 text-sm">
+  <p>{{ setting("announcement_text_" ~ store.language, "Free shipping on orders over 200 SAR") }}</p>
+</div>
+{% endif %}

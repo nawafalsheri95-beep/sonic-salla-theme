@@ -1,0 +1,11 @@
+<section class="container py-12" data-reveal>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    {% for item in [{"icon":"🚚","title":"شحن مجاني","desc":"للطلبات فوق 200 ريال"},{"icon":"↩️","title":"إرجاع سهل","desc":"خلال 30 يوماً"},{"icon":"🔒","title":"دفع آمن","desc":"حماية كاملة"},{"icon":"💬","title":"دعم 24/7","desc":"نحن هنا دائماً"}] %}
+    <div class="bg-cream-100 rounded-2xl p-6 text-center">
+      <span class="text-3xl block mb-3">{{ item.icon }}</span>
+      <h3 class="font-medium text-ink-900 mb-1">{{ item.title }}</h3>
+      <p class="text-sm text-ink-500">{{ item.desc }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>

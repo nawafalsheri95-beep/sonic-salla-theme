@@ -1,0 +1,20 @@
+{% extends "layouts/master" %}
+{% block content %}
+<div class="container py-12">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <div><salla-product-gallery :product-id="product.id"></salla-product-gallery></div>
+    <div>
+      <p class="text-sm text-ink-400 mb-2">{{ product.category.name }}</p>
+      <h1 class="font-display text-4xl mb-4">{{ product.name }}</h1>
+      <div class="flex items-center gap-4 mb-6">
+        <span class="font-display text-3xl">{{ product.price }}</span>
+        {% if product.sale_price %}<span class="text-ink-400 line-through">{{ product.regular_price }}</span>{% endif %}
+      </div>
+      <salla-add-to-cart :product-id="product.id" class="w-full"></salla-add-to-cart>
+      <div class="prose mt-8">{{ product.description }}</div>
+    </div>
+  </div>
+  {% include "partials/related-products" %}
+  {% include "partials/product-tabs" %}
+</div>
+{% endblock %}

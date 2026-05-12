@@ -1,0 +1,2 @@
+.container { @apply max-w-screen-xl mx-auto px-6; }
+@media (max-width: 768px) { .container { @apply px-4; } }

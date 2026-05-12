@@ -1,0 +1,7 @@
+{% if brands %}
+<section class="py-12 overflow-hidden border-y border-ink-100">
+  <div class="flex gap-12 animate-marquee whitespace-nowrap">
+    {% for brand in brands %}{% for _ in range(0, 2) %}<img src="{{ brand.image }}" alt="{{ brand.name }}" class="h-8 opacity-40 hover:opacity-100 transition-opacity">{% endfor %}{% endfor %}
+  </div>
+</section>
+{% endif %}

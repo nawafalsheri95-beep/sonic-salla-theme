@@ -1,0 +1,15 @@
+<article class="group relative bg-cream-50 rounded-2xl overflow-hidden" x-data="{hover:false}" @mouseenter="hover=true" @mouseleave="hover=false">
+  <a href="{{ product.url }}" class="block aspect-square bg-cream-100 overflow-hidden relative">
+    <img src="{{ product.image.url }}" alt="{{ product.name }}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+    {% if product.is_new %}<span class="badge badge-new absolute top-3 start-3">{{ trans("product.new") }}</span>{% endif %}
+    {% if product.has_discount %}<span class="badge badge-sale absolute top-3 end-3">-{{ product.discount_percent }}%</span>{% endif %}
+  </a>
+  <div class="p-4">
+    <p class="text-xs text-ink-400 mb-1">{{ product.category.name }}</p>
+    <h3 class="font-medium text-ink-900 mb-2 line-clamp-2"><a href="{{ product.url }}" class="hover:text-accent transition-colors no-underline">{{ product.name }}</a></h3>
+    <div class="flex items-center justify-between">
+      <span class="font-display text-lg">{{ product.price }}</span>
+      <salla-add-to-cart :product-id="{{ product.id }}" type="button" class="btn-icon"></salla-add-to-cart>
+    </div>
+  </div>
+</article>

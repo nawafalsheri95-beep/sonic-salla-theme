@@ -1,0 +1,14 @@
+<div class="container py-12" x-data="{tab:'description'}">
+  <div class="flex gap-6 border-b border-ink-100 mb-8">
+    {% for t in ["description","specs","reviews"] %}
+    <button @click="tab='{{ t }}'" :class="tab==='{{ t }}' ? 'border-b-2 border-ink-900 text-ink-900' : 'text-ink-400'" class="pb-3 font-medium text-sm transition-colors">{{ trans("product.tab_" ~ t) }}</button>
+    {% endfor %}
+  </div>
+  <div x-show="tab==='description'" class="prose max-w-none">{{ product.description }}</div>
+  <div x-show="tab==='specs'">
+    <salla-product-specifications :product-id="product.id"></salla-product-specifications>
+  </div>
+  <div x-show="tab==='reviews'">
+    <salla-product-reviews :product-id="product.id"></salla-product-reviews>
+  </div>
+</div>

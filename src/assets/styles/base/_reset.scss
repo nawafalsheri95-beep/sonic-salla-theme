@@ -1,0 +1,1 @@
+@layer base { *, *::before, *::after { @apply border-ink-100; } html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; } body { @apply font-sans text-base text-ink-900 bg-cream-50; overflow-x: hidden; } }

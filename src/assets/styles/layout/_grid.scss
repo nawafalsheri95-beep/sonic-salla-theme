@@ -1,0 +1,3 @@
+.grid-products { display: grid; grid-template-columns: repeat(var(--cols, 4), 1fr); gap: 1.5rem; }
+@media (max-width: 1024px) { .grid-products { --cols: 3; } }
+@media (max-width: 640px) { .grid-products { --cols: 2; } }

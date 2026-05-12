@@ -1,0 +1,12 @@
+{% extends "layouts/master" %}
+{% block content %}
+  {% include "partials/hero-slider" %}
+  {% include "partials/collections-grid" %}
+  {% include "partials/feature-section" %}
+  <salla-products-slider title="{{ trans("homepage.featured") }}" source="latest"></salla-products-slider>
+  {% include "partials/brand-story" %}
+  {% include "partials/testimonials" %}
+  {% include "partials/brands-marquee" %}
+  {% include "partials/instagram-grid" %}
+  {% include "partials/newsletter" %}
+{% endblock %}

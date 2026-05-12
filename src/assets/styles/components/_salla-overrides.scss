@@ -1,0 +1,4 @@
+/* Salla Web Components overrides */
+salla-product-card::part(price) { @apply font-display; }
+salla-button::part(base) { @apply rounded-pill; }
+salla-rating::part(star) { color: var(--color-accent, #ff5b2e); }

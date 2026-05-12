@@ -1,0 +1,16 @@
+<div x-data="{open:false}" @open-menu.window="open=true" @keydown.escape.window="open=false">
+  <div x-show="open" x-transition class="fixed inset-0 z-50 flex">
+    <div class="w-72 bg-cream-50 h-full flex flex-col shadow-lift overflow-y-auto">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-ink-100">
+        <a href="/" class="font-display text-xl">{{ store.name }}</a>
+        <button @click="open=false" class="btn-icon"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg></button>
+      </div>
+      <nav class="flex-1 px-6 py-8 space-y-1">
+        {% for item in menus.header %}
+          <a href="{{ item.url }}" class="block py-3 text-ink-900 font-medium border-b border-ink-50 hover:text-accent transition-colors">{{ item.name }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+    <div class="flex-1" @click="open=false"></div>
+  </div>
+</div>

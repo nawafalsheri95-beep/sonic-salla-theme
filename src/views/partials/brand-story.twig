@@ -1,0 +1,11 @@
+<section class="container py-20" data-reveal>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <div>
+      <p class="text-sm tracking-widest uppercase text-accent mb-4">{{ trans("brand.our_story") }}</p>
+      <h2 class="font-display text-5xl font-light leading-tight mb-6">{{ setting("brand_story_title") }}</h2>
+      <p class="text-ink-600 text-lg leading-relaxed mb-8">{{ setting("brand_story_text") }}</p>
+      <a href="/about" class="btn-ghost">{{ trans("brand.learn_more") }}</a>
+    </div>
+    <div class="aspect-square rounded-3xl overflow-hidden"><img src="{{ setting("brand_story_image") }}" alt="{{ store.name }}" class="w-full h-full object-cover"></div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ store.language }}" dir="{{ store.direction }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} — {{ store.name }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Fraunces:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  {{ asset("styles/app.css") }}
+</head>
+<body x-data>
+  {% include "components/announcement-bar" %}
+  {% include "components/header" %}
+  <main id="main-content">{% block content %}{% endblock %}</main>
+  {% include "components/footer" %}
+  {% include "components/mini-cart" %}
+  {% include "components/search-overlay" %}
+  {% include "components/mobile-menu" %}
+  {{ asset("scripts/app.js") }}
+</body>
+</html>

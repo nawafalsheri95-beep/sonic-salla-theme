@@ -1,0 +1,12 @@
+{% extends "layouts/master" %}
+{% block content %}
+<div class="container py-12">
+  <h1 class="font-display text-4xl mb-8">{{ category.name }}</h1>
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    {% for product in products %}
+      {% include "components/product-card" with {product: product} %}
+    {% endfor %}
+  </div>
+  <salla-pagination :total="pagination.total" :per-page="pagination.per_page" :current-page="pagination.current_page"></salla-pagination>
+</div>
+{% endblock %}
