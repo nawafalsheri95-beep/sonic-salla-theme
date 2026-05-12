@@ -1,11 +1,16 @@
 {
   "name": "Sonic",
   "name_ar": "سونيك",
+  "description": "A bold, multi-purpose Salla theme inspired by modern editorial commerce. Built for electronics, fashion, beauty, and lifestyle stores.",
+  "description_ar": "ثيم سلة احترافي متعدد الاستخدامات بتصميم عصري وتيبوغرافي جريء. مناسب للإلكترونياڪ والأزياء والجمال وأسلوب الحياة.",
   "version": "1.0.0",
   "author": "Your Studio",
-  "languages": ["ar", "en"],
-  "rtl": true,
-  "settings": "settings.json",
+  "author_url": "https://yourstudio.com",
+  "support_url": "https://yourstudio.com/support",
+  "preview_url": "https://demo.yourstudio.com/sonic",
+  "thumbnail": "preview.jpg",
   "category": "multi-purpose",
-  "tags": ["multi-purpose", "rtl", "modern"]
+  "tags": ["multi-purpose", "electronics", "minimal", "modern", "rtl", "ltr"],
+  "languages": ["ar", "en"],
+  "rtl": true
 }
