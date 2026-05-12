@@ -1,0 +1,212 @@
+{
+  "settings": [
+    {
+      "id": "general",
+      "label": "الإعدادات العامة",
+      "label_en": "General Settings",
+      "icon": "sliders",
+      "fields": [
+        {
+          "id": "primary_color",
+          "type": "color",
+          "label": "اللون الرئيسي",
+          "label_en": "Primary Color",
+          "default": "#0e0e11"
+        },
+        {
+          "id": "accent_color",
+          "type": "color",
+          "label": "لون التمييز",
+          "label_en": "Accent Color",
+          "default": "#ff5b2e"
+        },
+        {
+          "id": "font_family_ar",
+          "type": "select",
+          "label": "خط الواجهة العربية",
+          "label_en": "Arabic Font",
+          "default": "tajawal",
+          "options": [
+            { "value": "tajawal", "label": "Tajawal" },
+            { "value": "ibm-plex-arabic", "label": "IBM Plex Sans Arabic" },
+            { "value": "cairo", "label": "Cairo" },
+            { "value": "almarai", "label": "Almarai" }
+          ]
+        },
+        {
+          "id": "font_family_en",
+          "type": "select",
+          "label": "Latin Font",
+          "default": "geist",
+          "options": [
+            { "value": "geist", "label": "Geist" },
+            { "value": "inter", "label": "Inter" },
+            { "value": "satoshi", "label": "Satoshi" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "header",
+      "label": "الهيدر",
+      "label_en": "Header",
+      "icon": "layout-top",
+      "fields": [
+        {
+          "id": "header_style",
+          "type": "select",
+          "label": "نمط الهيدر",
+          "label_en": "Header Style",
+          "default": "centered",
+          "options": [
+            { "value": "centered", "label": "Centered Logo" },
+            { "value": "left", "label": "Logo Left" },
+            { "value": "split", "label": "Split Navigation" }
+          ]
+        },
+        {
+          "id": "sticky_header",
+          "type": "boolean",
+          "label": "هيدر ثابت عند التمرير",
+          "label_en": "Sticky Header",
+          "default": true
+        },
+        {
+          "id": "show_announcement_bar",
+          "type": "boolean",
+          "label": "إظهار شريط الإعلاناڪ",
+          "label_en": "Show Announcement Bar",
+          "default": true
+        },
+        {
+          "id": "announcement_text_ar",
+          "type": "text",
+          "label": "نص الإعلان (عربي)",
+          "default": "شحن مجاني للطلباڪ فوق 200ريال"
+        },
+        {
+          "id": "announcement_text_en",
+          "type": "text",
+          "label": "Announcement Text (EN)",
+          "default": "Free shipping on orders over 200 SAR"
+        }
+      ]
+    },
+    {
+      "id": "homepage",
+      "label": "الصفؽة الرئيسية",
+      "label_en": "Homepage",
+      "icon": "home",
+      "fields": [
+        {
+          "id": "hero_type",
+          "type": "select",
+          "label": "نمط القسم الريسي",
+          "default": "slider",
+          "options": [
+            { "value": "slider", "label": "Image Slider" },
+            { "value": "video", "label": "Video Background" },
+            { "value": "split", "label": "Split Hero" }
+          ]
+        },
+        {
+          "id": "hero_height",
+          "type": "select",
+          "label": "ارتفاع الـHero",
+          "default": "large",
+          "options": [
+            { "value": "small", "label": "صغير - 60vh" },
+            { "value": "medium", "label": "متوسط - 75vh" },
+            { "value": "large", "label": "كبير - 90vh" },
+            { "value": "full", "label": "كامل - 100vh" }
+          ]
+        },
+        {
+          "id": "show_featured_collections",
+          "type": "boolean",
+          "label": "إظهار التصنيفات المميزة",
+          "default": true
+        },
+        {
+          "id": "products_per_row",
+          "type": "select",
+          "label": "عدد المنتجات في الصف",
+          "default": "4",
+          "options": [
+            { "value": "2", "label": "2" },
+            { "value": "3", "label": "3" },
+            { "value": "4", "label": "4" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "product",
+      "label": "صفحة المنتج",
+      "label_en": "Product Page",
+      "icon": "package",
+      "fields": [
+        {
+          "id": "gallery_layout",
+          "type": "select",
+          "label": "تخطيط مؽرض الصور",
+          "default": "stacked",
+          "options": [
+            { "value": "stacked", "label": "صور مكدسة" },
+            { "value": "carousel", "label": "كاروسيل" },
+            { "value": "grid", "label": "زبكة" }
+          ]
+        },
+        {
+          "id": "show_stock_badge",
+          "type": "boolean",
+          "label": "إظهار حالة المخزون",
+          "default": true
+        },
+        {
+          "id": "show_countdown",
+          "type": "boolean",
+          "label": "إظهار العد التنازلي للعروض",
+          "default": true
+        },
+        {
+          "id": "show_rotating_badge",
+          "type": "boolean",
+          "label": "إظهار الشارة الدائرية",
+          "default": true
+        }
+      ]
+    },
+    {
+      "id": "footer",
+      "label": "الفوتر",
+      "label_en": "Footer",
+      "icon": "layout-bottom",
+      "fields": [
+        {
+          "id": "footer_style",
+          "type": "select",
+          "label": "نمط الفوتر",
+          "default": "dark",
+          "options": [
+            { "value": "dark", "label": "داكن" },
+            { "value": "light", "label": "فاتح" },
+            { "value": "minimal", "label": "مبسط" }
+          ]
+        },
+        {
+          "id": "show_newsletter",
+          "type": "boolean",
+          "label": "إظهار النشرة البريدية",
+          "default": true
+        },
+        {
+          "id": "show_payment_icons",
+          "type": "boolean",
+          "label": "إظهار أيقونات الدفز",
+          "default": true
+        }
+      ]
+    }
+  ]
+}
